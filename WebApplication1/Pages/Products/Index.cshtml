@@ -1,0 +1,56 @@
+﻿@page
+@model WebApplication1.Pages.Products.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 style="font-size:20px; text-align: center">Dette er en liste over nuværende produkter hos Vitec MV</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].Price)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{int count = 0;
+            string style = "background-color: #f2f2f2;";}
+        @foreach (var item in Model.Product)
+        {
+        <tr style="@style">
+            <td>
+                <a asp-page="./Details" asp-route-id="@item.ProductID"> @Html.DisplayFor(modelItem => item.Description)</a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                <img src="@Html.DisplayFor(modelItem => item.Picture)" width="35" height="35">
+            </td>
+            <td>
+                @*<a asp-page="./Edit" asp-route-id="@item.ProductID">Edit</a> |
+            <a asp-page="./Details" asp-route-id="@item.ProductID">Details</a> |
+            <a asp-page="./Delete" asp-route-id="@item.ProductID">Delete</a>*@
+            </td>
+        </tr>
+            if (count == 0)
+            {
+                count++;
+                style = "";
+            }
+            else
+            {
+                count = 0;
+                style = "background-color: #f2f2f2;";
+            }
+        }
+    </tbody>
+</table>
