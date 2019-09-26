@@ -20,7 +20,9 @@ namespace WebApplication1.Data
             {
                 new Product{Description="Dette er produktet til dig med ordblindhed", Price=699.99, AdvancedDescription=tempAdvancedDescription, Picture="https://dyslexiaida.org/wp-content/uploads/2016/05/Not-Stupid-Not-Lazy-Cover-Final-sm.jpg" },
                 new Product{Description="Dette er produktet til dig med svagt syn", Price=1250, AdvancedDescription=tempAdvancedDescription, Picture="https://res.cloudinary.com/liingo/image/upload/c_fill,g_center,h_339,w_990,q_85/754317164787_2.jpg"},
-                new Product{Description="Dette er et testprodukt", Price=69, AdvancedDescription=tempAdvancedDescription, Picture="https://images.sftcdn.net/images/t_app-cover-l,f_auto/p/ce2ece60-9b32-11e6-95ab-00163ed833e7/260663710/the-test-fun-for-friends-screenshot.jpg"}
+                new Product{Description="Dette er et testprodukt", Price=69, AdvancedDescription=tempAdvancedDescription, Picture="https://images.sftcdn.net/images/t_app-cover-l,f_auto/p/ce2ece60-9b32-11e6-95ab-00163ed833e7/260663710/the-test-fun-for-friends-screenshot.jpg"},
+                 new Product{Description="Dette er et testprodukt", Price=69, AdvancedDescription=tempAdvancedDescription, Picture="https://images.sftcdn.net/images/t_app-cover-l,f_auto/p/ce2ece60-9b32-11e6-95ab-00163ed833e7/260663710/the-test-fun-for-friends-screenshot.jpg"},
+ new Product{Description="Dette er et testprodukt", Price=69, AdvancedDescription=tempAdvancedDescription, Picture="https://images.sftcdn.net/images/t_app-cover-l,f_auto/p/ce2ece60-9b32-11e6-95ab-00163ed833e7/260663710/the-test-fun-for-friends-screenshot.jpg"}
 
             };
             foreach (Product p in products)

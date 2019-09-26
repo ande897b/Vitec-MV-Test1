@@ -16,7 +16,10 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Product[0].Description)
+
+            </th>
+            <th >
+                @Html.DisplayNameFor(model => model.Product[0].Description) af produktet
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Product[0].Price)
@@ -30,30 +33,31 @@
         @foreach (var item in Model.Product)
         {
         <tr style="@style">
-            <td>
-                <a asp-page="./Details" asp-route-id="@item.ProductID"> @Html.DisplayFor(modelItem => item.Description)</a>
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
+            <td style="width:5%;">
                 <img src="@Html.DisplayFor(modelItem => item.Picture)" width="35" height="35">
             </td>
-            <td>
-                @*<a asp-page="./Edit" asp-route-id="@item.ProductID">Edit</a> |
-            <a asp-page="./Details" asp-route-id="@item.ProductID">Details</a> |
-            <a asp-page="./Delete" asp-route-id="@item.ProductID">Delete</a>*@
+            <td >
+                <a style="font-family:Arial Black, Gadget, sans-serif; color:#4d4e4c ; font-size :20px" asp-page="./Details" asp-route-id="@item.ProductID"> @Html.DisplayFor(modelItem => item.Description)</a>
             </td>
+            <td style="font-family:Arial Black, Gadget, sans-serif; color:#4d4e4c">
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            
+            @*<td>
+            <a asp-page="./Edit" asp-route-id="@item.ProductID">Edit</a> |
+        <a asp-page="./Details" asp-route-id="@item.ProductID">Details</a> |
+        <a asp-page="./Delete" asp-route-id="@item.ProductID">Delete</a>
+        </td>*@
         </tr>
             if (count == 0)
             {
                 count++;
-                style = "";
+                style = "background-color: #BEDCE6";
             }
             else
             {
                 count = 0;
-                style = "background-color: #f2f2f2;";
+                style = "background-color: #F3F3F3;";
             }
         }
     </tbody>
