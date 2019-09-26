@@ -19,6 +19,8 @@ namespace WebApplication1.Models
             modelBuilder.Entity<Product>().ToTable("Product");
 
         }
+
+
     }
 }
    

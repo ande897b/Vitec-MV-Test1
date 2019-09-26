@@ -25,6 +25,8 @@ namespace WebApplication1
         }
         private static void CreateDbIfNotExists(IWebHost host)
         {
+
+
             using (var scope = host.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
