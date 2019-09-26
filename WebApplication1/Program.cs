@@ -44,7 +44,12 @@ namespace WebApplication1
             }
         }
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
+            WebHost.CreateDefaultBuilder(args).ConfigureLogging(logBuilder =>
+            {
+                logBuilder.ClearProviders();
+                logBuilder.AddDebug();
+                logBuilder.AddTraceSource("Information, ActivityTracing");
+            })
                 .UseStartup<Startup>();
     }
 }
